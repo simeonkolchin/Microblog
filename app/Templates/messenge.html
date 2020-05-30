@@ -1,0 +1,29 @@
+﻿{% extends 'messenger.html' %}
+{% block content %}
+{% if form %}
+<form action="" method="post">
+    <div class="form__field">
+        <textarea name="post" placeholder="Message"></textarea>
+        <button name="submit">
+            <img src="{{ url_for('static', filename="images/") }}" />
+        </button>
+    </div>
+    {% for error in form.post.errors %}
+    <span>[{{ error }}]</span>
+    {% endfor %}
+</form>
+{% endif %}
+<div class="post__field">
+    {% for post in posts %}
+    {% include '_post.html' %}
+    {% endfor %}
+
+    {% if prev_url %}
+    <a href="{{ prev_url }}">Новый пост:</a>
+    {% endif %}
+
+    {% if next_url %}
+    <a href="{{ next_url }}">Старый пост:</a>
+    {% endif %}
+</div>
+{% endblock %}

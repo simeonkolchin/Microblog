@@ -1,0 +1,79 @@
+body {
+    text-align: center;
+    justify-content: center;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    color: white;
+    font-weight: normal;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.header__logo {
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+
+.container {
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+    width: 400px;
+    font-weight: 100;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    border: none;
+    background-color: transparent;
+    font-size: 23px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+    border-bottom: 2px solid #4AF6CD;
+}
+
+.dws-input:hover::before {
+    color: #4AF6CD;
+    transition: all 0.3s;
+}
+
+
+input[type="submit"] {
+    background: #4AF6CD;
+    color: white;
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+    input[type="submit"]:hover::before {
+        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+        color: #4AF6CD;
+        transition: all 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+    }
+
+
+.next {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+    .next:hover {
+        color: #4AF6CD;
+    }

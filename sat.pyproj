@@ -16,7 +16,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>sat</Name>
     <RootNamespace>sat</RootNamespace>
-    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|sat|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -28,6 +28,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\email.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\forms.py">
       <SubType>Code</SubType>
     </Compile>
@@ -49,20 +52,41 @@
     <Compile Include="project_sat.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\css\styles__register.css" />
+    <Content Include="app\static\css\styles__login.css" />
+    <Content Include="app\static\css\styles__layout.css" />
+    <Content Include="app\static\css\styles__user.css" />
+    <Content Include="app\static\css\style__index2.css" />
+    <Content Include="app\static\css\styles__post.css" />
+    <Content Include="app\static\images\bracelet.png" />
+    <Content Include="app\static\images\frangipani.png" />
+    <Content Include="app\static\images\hammock.png" />
+    <Content Include="app\static\images\header-bg.jpg" />
+    <Content Include="app\static\images\img-logo.png" />
+    <Content Include="app\static\images\img1.jpg" />
+    <Content Include="app\static\images\img2.jpg" />
+    <Content Include="app\static\js\libs.min.js" />
+    <Content Include="app\static\js\main.js" />
+    <Content Include="app\Templates\index2.html" />
     <Content Include="app\Templates\index.html" />
     <Content Include="app\Templates\layout.html" />
     <Content Include="app\Templates\login.html" />
+    <Content Include="app\Templates\messenge.html" />
+    <Content Include="app\Templates\messenger.html" />
     <Content Include="app\Templates\register.html" />
+    <Content Include="app\Templates\reset_password.html" />
+    <Content Include="app\Templates\reset_password.txt" />
+    <Content Include="app\Templates\reset_password_request.html" />
     <Content Include="app\Templates\user.html" />
     <Content Include="app\Templates\edit_profile.html" />
     <Content Include="app\Templates\_post.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env1\">
-      <Id>env1</Id>
+    <Interpreter Include="sat\">
+      <Id>sat</Id>
       <Version>3.8</Version>
-      <Description>env1 (Python 3.8 (32-bit))</Description>
+      <Description>sat (Python 3.8 (32-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
@@ -71,6 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\css\" />
+    <Folder Include="app\static\images\" />
+    <Folder Include="app\static\js\" />
     <Folder Include="app\Templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />

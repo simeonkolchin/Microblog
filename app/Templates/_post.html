@@ -1,11 +1,11 @@
-﻿<table>
-    <tr valign="top">
-        <td><img class="user__img" src="{{ post.author.avatar(36) }}"></td>
-        <td>
-            <a href="{{ url_for('user', username=post.author.username) }}">
+﻿<table class="post">
+    <tr valign="top" class="post__block">
+        <td class="post__block-avatar"><img class="post__avatar" src="{{ post.author.avatar(36) }}"></td>
+        <td class="post__block-messenge">
+            <a class="post__block-messenge__username" href="{{ url_for('user', username=post.author.username) }}">
                 {{ post.author.username }}
             </a>
-            says:<br>{{ post.body }}
+            <br class="post__block-messenge__messenge" style="margin-left: 30px;">{{ post.body }}
         </td>
     </tr>
 </table>

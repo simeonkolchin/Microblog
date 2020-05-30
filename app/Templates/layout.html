@@ -1,107 +1,45 @@
-﻿<style>
-    body {
-        background: linear-gradient(315deg,powderblue,yellow,red);
-        text-align: center;
-    }
-    .user__img {
-        border-radius: 50%;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    }
-
-    .user__link{
-        text-decoration:none;
-        color:chartreuse;
-        font-family:Britannic;
-    }
-
-    .menu__list {
-        justify-content: center;
-        display: flex;
-    }
-
-    .menu__list-link {
-        border-bottom: 2px solid #c4c4c4;
-        border-top: 2px solid #c4c4c4;
-        font-size: 20px;
-        line-height: 20px;
-        color: #000;
-        text-decoration: none;
-        display: block;
-        width: 300px;
-        padding: 20px 10px 20px;
-        list-style-type: none;
-        border-right: 1px solid #c4c4c4;
-        border-left: 1px solid #c4c4c4;
-        transition: all .3s;
-    }
-
-    .menu__list-item:first-child{
-        border-left:1px solid #c4c4c4;
-    }
-
-    .menu__list-item:last-child{
-        border-right:1px solid #c4c4c4;
-    }
-
-    .menu__list-link:hover{
-        color:#fff;
-        background-color:#000;
-    }
-    .menu__list-item {
-        list-style-type:none;
-    }
-
-    .register{
-        text-decoration:none;
-    }
-</style>
-
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     {% if title %}
     <title>{{ title }} - Microblog</title>
     {% else %}
     <title>Welcome to Microblog</title>
     {% endif %}
 </head>
-<body>
-    <header class ="header">
-    <nav class = "navigator">
-        <ul class="menu__list">
-            <li class ="menu__list-item">
-                 <a class="menu__list-link" href="{{ url_for('index') }}">Home</a>
-            </li>
-                 {% if current_user.is_anonymous %}
-            <li class ="menu__list-item">
-                <a class = "menu__list-link" href="{{ url_for('login') }}">Sign in</a>
-            </li>
-                {% else %}
-            <li class ="menu__list-item">
-                 <a class = "menu__list-link" href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-            </li>
-            <li class ="menu__list-item">
-                 <a class = "menu__list-link" href="{{ url_for('logout') }}">Logout</a>
-            </li>
-            <li class="menu__list-item">
-                <a class ="menu__list-link" href="{{ url_for('explore') }}">Explore</a>
-            </li>
-        </ul>
-                {% endif %}
-        
-    </nav>
+<body style="background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;">
+    <link href="{{ url_for("static", filename="css/styles__layout.css") }}" rel="stylesheet">
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="{{ url_for('messenge') }}">Messenger</a></li>
+                        <li><a href="{{ url_for('index2') }}">Microblog</a></li>
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('user', username=current_user.username) }}">Профиль</a></li>
+                        <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="showcase">
+        <div class="container showcase-inner">
+            <h1 class="animete__animated animate__jackInTheBox">Welcome</h1>
+            <p class="animete__animated animate__slideInUp">Добро пожаловать на мой первый сайт. Здесь вы можете оценить красоту моего сайта, оставить коментарий, посмотреть свой профиль. Давайте начнем!</p>
+            <a href="{{ url_for('index2') }}" class="btn">Начать</a>
+        </div>
     </header>
-
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
-
-    {% block content %}{% endblock %}
-    <div>Copyright 2020</div>
 </body>
 </html>
