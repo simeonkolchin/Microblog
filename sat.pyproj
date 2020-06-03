@@ -58,6 +58,7 @@
     <Content Include="app\static\css\styles__user.css" />
     <Content Include="app\static\css\style__index2.css" />
     <Content Include="app\static\css\styles__post.css" />
+    <Content Include="app\static\images\slide-1" />
     <Content Include="app\static\images\bracelet.png" />
     <Content Include="app\static\images\frangipani.png" />
     <Content Include="app\static\images\hammock.png" />
