@@ -33,6 +33,7 @@ input[type="text"], input[type="password"], input[type="email"] {
     margin-bottom: 50px;
     padding-left: 10px;
     border-bottom: 2px solid #4AF6CD;
+    color: white;
 }
 
 .dws-input:hover::before {
