@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=Config.TEMPLATES_DIR)
 wsgi_app = app.wsgi_app
 app.config.from_object(Config)
 mail = Mail(app)
