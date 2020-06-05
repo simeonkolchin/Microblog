@@ -52,12 +52,16 @@
     <Compile Include="project_sat.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\css\message.css" />
+    <Content Include="app\static\css\post__style.css" />
     <Content Include="app\static\css\styles__register.css" />
     <Content Include="app\static\css\styles__login.css" />
     <Content Include="app\static\css\styles__layout.css" />
     <Content Include="app\static\css\styles__user.css" />
     <Content Include="app\static\css\style__index2.css" />
-    <Content Include="app\static\css\styles__post.css" />
+    <Content Include="app\static\images\back.svg" />
+    <Content Include="app\static\images\key.svg" />
+    <Content Include="app\static\images\menu.svg" />
     <Content Include="app\static\images\slide-1" />
     <Content Include="app\static\images\bracelet.png" />
     <Content Include="app\static\images\frangipani.png" />
@@ -66,6 +70,8 @@
     <Content Include="app\static\images\img-logo.png" />
     <Content Include="app\static\images\img1.jpg" />
     <Content Include="app\static\images\img2.jpg" />
+    <Content Include="app\static\images\submit.svg" />
+    <Content Include="app\static\images\user.svg" />
     <Content Include="app\static\js\libs.min.js" />
     <Content Include="app\static\js\main.js" />
     <Content Include="app\Templates\index2.html" />

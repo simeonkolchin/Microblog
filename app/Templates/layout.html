@@ -24,9 +24,9 @@
             <div>
                 <div>
                     <ul>
-                        <li><a href="{{ url_for('messenge') }}">Messenger</a></li>
-                        <li><a href="{{ url_for('index2') }}">Microblog</a></li>
-                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('messenge') }}">Message</a></li>
+                        <li><a style="text-decoration: line-through;" href="{{ url_for('index') }}">Microblog</a></li>
+                        <li><a style="color:#4AF6CD" href="{{ url_for('index') }}">Главная</a></li>
                         <li><a href="{{ url_for('user', username=current_user.username) }}">Профиль</a></li>
                         <li><a href="{{ url_for('logout') }}">Выйти</a></li>
                     </ul>
@@ -41,5 +41,10 @@
             <a href="{{ url_for('index2') }}" class="btn">Начать</a>
         </div>
     </header>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
 </body>
 </html>

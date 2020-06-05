@@ -12,42 +12,13 @@
     {% else %}
     <title>Welcome to Microblog</title>
     {% endif %}
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;800&display=swap" rel="stylesheet">
 </head>
-<body style="background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;">
-    <link href="{{ url_for("static", filename="css/styles__layout.css") }}" rel="stylesheet">
-    <link href="{{ url_for("static", filename="css/styles__post.css") }}" rel="stylesheet">
-    <div class="menu-wrap">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger">
-            <div></div>
-        </div>
-        <div class="menu">
-            <div>
-                <div>
-                    <ul>
-                        <li><a href="{{ url_for('index2') }}">Microblog</a></li>
-                        <li><a href="{{ url_for('index') }}">Главная</a></li>
-                        <li><a href="{{ url_for('user', username=current_user.username) }}">Профиль</a></li>
-                        <li><a href="{{ url_for('logout') }}">Выйти</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <header class="showcase">
-        <div class="container showcase-inner">
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-            <ul>
-                {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-            {% endwith %}
-
-            {% block content %}{% endblock %}
-        </div>
-    </header>
+<body>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
 </body>
 </html>

@@ -16,6 +16,7 @@
 </head>
 <body style="background: linear-gradient(60deg, rgba(33, 26, 26), rgba(50, 36, 36)">
     <link href="{{ url_for("static", filename="css/styles__user.css") }}" rel="stylesheet">
+    <link href="{{ url_for("static", filename="css/post__style.css") }}" rel="stylesheet">
     <div class="menu-wrap">
         <input type="checkbox" class="toggler">
         <div class="hamburger">
@@ -25,9 +26,10 @@
             <div>
                 <div>
                     <ul>
-                        <li><a href="{{ url_for('index2') }}">Microblog</a></li>
+                        <li><a href="{{ url_for('messenge') }}">Message</a></li>
+                        <li><a style="text-decoration: line-through;" href="{{ url_for('user', username=current_user.username) }}">Microblog</a></li>
                         <li><a href="{{ url_for('index') }}">Главная</a></li>
-                        <li><a href="{{ url_for('user', username=current_user.username) }}">Профиль</a></li>
+                        <li><a style="color:#4AF6CD" href="{{ url_for('user', username=current_user.username) }}">Профиль</a></li>
                         <li><a href="{{ url_for('logout') }}">Выйти</a></li>
                     </ul>
                 </div>
@@ -56,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </header>
     <div class="header__user-info">
@@ -76,19 +78,22 @@
             {% endif %}
         </div>
         <br />
-        {% for post in posts %}
+        <div class="post_field">
+            {% for post in posts %}
             {% include '_post.html' %}
-        {% endfor %}
-        {% if prev_url %}
-    <a href="{{ prev_url }}">Новое сообщение:</a>
-        {% endif %}
-        {% if next_url %}
-    <a href="{{ next_url }}">Старое сообщение:</a>
-        {% endif %}
-        {% for post in posts %}
-        {% endfor %}
-        {% endblock %}
-    </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            {% endfor %}
+            {% if prev_url %}
+            <a href="{{ prev_url }}">Новое сообщение:</a>
+            {% endif %}
+            {% if next_url %}
+            <a href="{{ next_url }}">Старое сообщение:</a>
+            {% endif %}
+            {% for post in posts %}
+            {% endfor %}
+            {% endblock %}
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>
