@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-    <title>Meassage</title>
+    <title>Message</title>
 </head>
 <body style="background: linear-gradient(60deg, rgba(33, 26, 26), rgba(50, 36, 36)">
     {% extends 'messenger.html' %}
@@ -32,11 +32,11 @@
     {% endfor %}
 
     {% if prev_url %}
-    <a href="{{ url_for('prev_url') }}">Newer posts</a>
+    <a href="{{ prev_url }}">Newer posts</a>
     {% endif %}
 
     {% if next_url %}
-    <a href="{{ url_for('next_url') }}">Older posts</a>
+    <a href="{{ next_url }}">Older posts</a>
     {% endif %}
     </div>
     <form action="" method="post" class="wrap">
