@@ -47,7 +47,7 @@
                 <input class="btn" type="submit" name="submit" value="Войти">
             </div>
         </form>
-        <p><a class="res__pas" href="{{ url_for('reset_password_request') }}">Востановить пароль</a></p>
+        <p><a class="res__pas" style="text-decoration: line-through;" href="{{ url_for('login') }}">Востановить пароль</a></p>
         <p class="reg-link--2">Нет аккаунта?<a class="reg-link animate__animated animate__flash animate__slow" href="{{ url_for('register') }}"> Регистрация</a></p>
         {% endblock %}
     </div>
