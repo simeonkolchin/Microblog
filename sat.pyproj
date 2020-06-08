@@ -52,7 +52,8 @@
     <Compile Include="project_sat.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\static\css\message.css" />
+    <Content Include="app\static\css\style__history.css" />
+    <Content Include="app\static\css\style__message.css" />
     <Content Include="app\static\css\post__style.css" />
     <Content Include="app\static\css\styles__register.css" />
     <Content Include="app\static\css\styles__login.css" />
@@ -74,6 +75,7 @@
     <Content Include="app\static\images\user.svg" />
     <Content Include="app\static\js\libs.min.js" />
     <Content Include="app\static\js\main.js" />
+    <Content Include="app\Templates\history.html" />
     <Content Include="app\Templates\index2.html" />
     <Content Include="app\Templates\index.html" />
     <Content Include="app\Templates\layout.html" />
