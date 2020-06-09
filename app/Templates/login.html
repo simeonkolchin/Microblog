@@ -28,29 +28,32 @@
         <form action="" method="post">
             {{ form.hidden_tag() }}
             <div class="dws-input">
-                <input type="text" name="username" placeholder="Ведите имя"><br>
+                <input class="input__line" type="text" name="username" placeholder="Ведите имя"><br>
                 {% for error in form.username.errors %}
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </div>
             <div class="dws-input">
-                <input type="password" name="password" placeholder="Введите пароль"><br>
+                <input class="input__line" type="password" name="password" placeholder="Введите пароль"><br>
                 {% for error in form.password.errors %}
                 <span style="color: red">[{{ error }}]</span>
                 {% endfor %}
             </div>
-            <label>
+            <label class="checkbox">
                 <input type="checkbox" id="payt" /><label class="checkbox__hover" for="payt"></label>
                 <span class="checkbox__name-line">/</span>
                 <span class="checkbox__name-text">Запомнить меня</span>
             </label>
-            <div class="shop__slider-btn">
-                <input class="btn" type="submit" name="submit" value="Войти">
+            <div class="btn__submit">
+                <input class="" type="submit" name="submit" value="Войти">
             </div>
         </form>
-        <p><a class="res__pas" style="text-decoration: line-through;" href="{{ url_for('login') }}">Востановить пароль</a></p>
+        <p><a class="res__pas" href="{{ url_for('login') }}">Востановить пароль</a></p>
         <p class="reg-link--2">Нет аккаунта?<a class="reg-link animate__animated animate__flash animate__slow" href="{{ url_for('register') }}"> Регистрация</a></p>
         {% endblock %}
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

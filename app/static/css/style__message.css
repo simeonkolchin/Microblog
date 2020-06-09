@@ -278,6 +278,7 @@ img {
     float: left;
     width: 100%;
     color: #ccc;
+    border-radius: 25px;
 }
 
     .form_field textarea:focus {

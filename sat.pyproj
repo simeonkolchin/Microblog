@@ -52,6 +52,11 @@
     <Compile Include="project_sat.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\css\animations.css" />
+    <Content Include="app\static\css\editor.css" />
+    <Content Include="app\static\css\font-awesome.css" />
+    <Content Include="app\static\css\font-awesome.min.css" />
+    <Content Include="app\static\css\style.css" />
     <Content Include="app\static\css\style__history.css" />
     <Content Include="app\static\css\style__message.css" />
     <Content Include="app\static\css\post__style.css" />
@@ -60,7 +65,19 @@
     <Content Include="app\static\css\styles__layout.css" />
     <Content Include="app\static\css\styles__user.css" />
     <Content Include="app\static\css\style__index2.css" />
+    <Content Include="app\static\fonts\fontawesome-webfont.eot" />
+    <Content Include="app\static\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\static\fonts\fontawesome-webfont.ttf" />
+    <Content Include="app\static\fonts\fontawesome-webfont.woff" />
+    <Content Include="app\static\fonts\fontawesome-webfont.woff2" />
+    <Content Include="app\static\fonts\FontAwesome.otf" />
     <Content Include="app\static\images\back.svg" />
+    <Content Include="app\static\images\background2.png" />
+    <Content Include="app\static\images\background_gold.png" />
+    <Content Include="app\static\images\chevron_right.png" />
+    <Content Include="app\static\images\circle.png" />
+    <Content Include="app\static\images\cross.png" />
+    <Content Include="app\static\images\folder.png" />
     <Content Include="app\static\images\key.svg" />
     <Content Include="app\static\images\menu.svg" />
     <Content Include="app\static\images\slide-1" />
@@ -71,8 +88,13 @@
     <Content Include="app\static\images\img-logo.png" />
     <Content Include="app\static\images\img1.jpg" />
     <Content Include="app\static\images\img2.jpg" />
+    <Content Include="app\static\images\square.png" />
+    <Content Include="app\static\images\square.svg" />
     <Content Include="app\static\images\submit.svg" />
+    <Content Include="app\static\images\triangle.png" />
     <Content Include="app\static\images\user.svg" />
+    <Content Include="app\static\js\epic-ui-editor.js" />
+    <Content Include="app\static\js\jquery-1.11.3.min.js" />
     <Content Include="app\static\js\libs.min.js" />
     <Content Include="app\static\js\main.js" />
     <Content Include="app\Templates\history.html" />
@@ -108,6 +130,7 @@
     <Folder Include="app\static\css\" />
     <Folder Include="app\static\images\" />
     <Folder Include="app\static\js\" />
+    <Folder Include="app\static\fonts\" />
     <Folder Include="app\Templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />

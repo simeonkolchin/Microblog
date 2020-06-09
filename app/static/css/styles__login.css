@@ -32,9 +32,15 @@ input[type="text"], input[type="password"] {
     font-size: 23px;
     margin-bottom: 50px;
     padding-left: 10px;
-    border-bottom: 2px solid #4AF6CD;
+    border-bottom: 2px solid #fff;
     color: white;
+    transition: .5s;
 }
+
+    .input__line.active {
+        border-bottom: 2px solid #4AF6CD;
+        transition: .5s;
+    }
 
 .dws-input:hover::before {
     color: #4AF6CD;
@@ -49,7 +55,7 @@ input[type="text"], input[type="password"] {
 
 
 input[type="submit"] {
-    background: #4AF6CD;
+    background-color: transparent;
     color: white;
     width: 100px;
     height: 40px;
@@ -58,8 +64,14 @@ input[type="submit"] {
     border-radius: 4px;
     border: none;
     border-radius: 30px;
-    font-weight: 400;
+    font-weight: 700;
     margin-top: 20px;
+    transition: .5s;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: .5s;
 }
 
     input[type="submit"]:hover::before {
@@ -70,7 +82,13 @@ input[type="submit"] {
 
     input[type="submit"]:hover {
         cursor: pointer;
-        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+        border-top: 2px solid #4af6cd;
+        border-bottom: 2px solid #4af6cd;
+        border-left: 2px solid #4af6cd;
+        border-right: 2px solid #4af6cd;
+        color: #4af6cd;
+        box-shadow: 0px 0px 5px rgba(74, 246, 205, 0.837777);
+        transition: .5s;
     }
 
 .reg-link {
@@ -104,116 +122,7 @@ input[type=checkbox] {
     display: none;
 }
 
-.slick-slider {
-    position: relative;
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
 
-.slick-list {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-    .slick-list:focus {
-        outline: none;
-    }
-
-    .slick-list.dragging {
-        cursor: pointer;
-        cursor: hand;
-    }
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-    .slick-track:before,
-    .slick-track:after {
-        display: table;
-        content: '';
-    }
-
-    .slick-track:after {
-        clear: both;
-    }
-
-.slick-loading .slick-track {
-    visibility: hidden;
-}
-
-.slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-}
-
-[dir='rtl'] .slick-slide {
-    float: right;
-}
-
-.slick-slide img {
-    display: block;
-}
-
-.slick-slide.slick-loading img {
-    display: none;
-}
-
-.slick-slide.dragging img {
-    pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-    display: block;
-}
-
-.slick-loading .slick-slide {
-    visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-    display: none;
-}
-
-/*!
- * animate.css - https://animate.style/
- * Version - 4.0.0
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2020 Animate.css
- */
 
 .pseudocheckbox::before {
     content: "\00A0";
@@ -253,11 +162,14 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
+    transition: .5s; 
 }
 
 
     .res__pas:hover {
-        color: #4AF6CD;
+        color: red;
+        text-decoration: line-through;
+        transition: .5s;
     }
 
 .header__map {
@@ -266,6 +178,107 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
     top: 0;
     z-index: 3;
 }
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+#payt {
+    display: none;
+}
+
+
+
+[for="payt"] {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    border-radius: 50px;
+    background-color: transparent;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.2);
+    cursor: pointer;
+    left: -110px;
+    top: -4px;
+}
+
+    [for="payt"]:before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        display: block;
+        width: 17px;
+        height: 17px;
+        border-radius: 100%;
+        background-color: #fff;
+        transition: .5s;
+    }
+
+#payt:checked ~ [for="payt"]:before {
+    left: 24px;
+    background-color: #4AF6CD;
+}
+
+#payt:checked ~ [for="payt"] {
+    border-top: 2px solid #4AF6CD;
+    border-bottom: 2px solid #4AF6CD;
+    border-left: 2px solid #4AF6CD;
+    border-right: 2px solid #4AF6CD;
+    box-shadow: 0px 0px 1px rgba(74, 246, 205, 0.837777);
+}
+
+.checkbox__name-text {
+    position: absolute;
+    right: 104px;
+    font-size: 19px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.checkbox__name-line {
+    right: -24px;
+    position: absolute;
+    left: -158px;
+    font-size: 30px;
+    top: 245px;
+    font-weight: 300;
+    transition: .5s;
+}
+
+
+    .checkbox__name-text.active,
+    .checkbox__name-line.active {
+        color: #4AF6CD;
+        transition: .5s;
+        text-shadow: 0px 0px 1px rgba(74, 246, 205, 0.837777);
+    }
+
+
+/*Media(375x620)*/
+
+@media (max-width: 425px) {
+    .container {
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Animate.css*/
+/*aaaaaaaaaaa*/
 
 :root {
     --animate-duration: 1s;
@@ -4548,74 +4561,114 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
     }
 }
 
-:not(svg) {
-    transform-origin: 0px 0px;
+
+.slick-slider {
+    position: relative;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
 }
 
-#payt {
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+    .slick-list:focus {
+        outline: none;
+    }
+
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .slick-track:before,
+    .slick-track:after {
+        display: table;
+        content: '';
+    }
+
+    .slick-track:after {
+        clear: both;
+    }
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
     display: none;
 }
 
-
-
-[for="payt"] {
-    position: relative;
-    display: inline-block;
-    width: 45px;
-    height: 24px;
-    border-radius: 50px;
-    background-color: transparent;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.2);
-    cursor: pointer;
-    left: -110px;
-    top: -4px;
+.slick-slide.dragging img {
+    pointer-events: none;
 }
 
-    [for="payt"]:before {
-        content: "";
-        position: absolute;
-        left: 4px;
-        top: 4px;
-        display: block;
-        width: 17px;
-        height: 17px;
-        border-radius: 100%;
-        background-color: #fff;
-        transition: .5s;
-    }
-
-#payt:checked ~ [for="payt"]:before {
-    left: 24px;
-    background-color: #4AF6CD;
-
-}
-#payt:checked ~ [for="payt"] {
-    border-top: 2px solid #4AF6CD;
-    border-bottom: 2px solid #4AF6CD;
-    border-left: 2px solid #4AF6CD;
-    border-right: 2px solid #4AF6CD;
+.slick-initialized .slick-slide {
+    display: block;
 }
 
-.checkbox__name-text {
-    position: absolute;
-    right: 104px;
-    font-size: 19px;
-    font-weight: 400;
+.slick-loading .slick-slide {
+    visibility: hidden;
 }
 
-.checkbox__name-line {
-    right: -24px;
-    position: absolute;
-    left: -158px;
-    font-size: 30px;
-    top: 245px;
-    font-weight: 300;
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
 }
 
-.checkbox__hover:hover {
-    box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+.slick-arrow.slick-hidden {
+    display: none;
 }
+
+/*!
+ * animate.css - https://animate.style/
+ * Version - 4.0.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2020 Animate.css
+ */
