@@ -296,6 +296,7 @@ body {
     border-right: 2px solid #4AF6CD;
     width: 247px;
     height: 30px;
+    transition: all 0.3s;
 }
 
     .header__user-info__editor > p {
@@ -303,7 +304,8 @@ body {
     }
 
     .header__user-info__editor:hover {
-        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+        color: #2f1d1d;
+        background-color: #4af6cd;
         transition: all 0.3s;
     }
 
@@ -311,6 +313,11 @@ body {
     text-decoration: none;
     color: #4AF6CD;
 }
+
+    .redactor:hover {
+        color: #2f1d1d;
+        font-weight: 700;
+    }
 
     .header__user-info__fllow {
     }
@@ -328,19 +335,21 @@ body {
     margin-top: 20px;
 }
 
-.header__user-info__fllow > p {
-    width: 140px;
-    height: 30px;
-    border-top: 2px solid #4AF6CD;
-    border-left: 2px solid #4AF6CD;
-    border-right: 2px solid #4AF6CD;
-    border-bottom: 2px solid #4AF6CD;
-    border-radius: 7px;
-    font-size: 19px;
-}
+    .header__user-info__fllow > p {
+        width: 140px;
+        height: 30px;
+        border-top: 2px solid #4AF6CD;
+        border-left: 2px solid #4AF6CD;
+        border-right: 2px solid #4AF6CD;
+        border-bottom: 2px solid #4AF6CD;
+        border-radius: 7px;
+        font-size: 19px;
+        transition: all 0.3s;
+    }
 
     .header__user-info__fllow > p:hover {
-        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+        color: #2f1d1d;
+        background-color: #4af6cd;
         transition: all 0.3s;
     }
 
@@ -351,22 +360,26 @@ body {
         margin-left: 10px;
     }
 
-/* Slider */
-.slick-slider {
-    position: relative;
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
+        a.folow:hover {
+            color: #2f1d1d;
+            font-weight: 700;
+        }
+        /* Slider */
+        .slick-slider {
+            position: relative;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -khtml-user-select: none;
+            -ms-touch-action: pan-y;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+        }
 
 .slick-list {
     position: relative;

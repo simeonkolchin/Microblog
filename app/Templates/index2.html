@@ -33,6 +33,10 @@
                             <span style="color: red;">(в разработке)</span>
                         </li>
                         <li><a href="{{ url_for('messenge') }}">Message</a></li>
+                        <li>
+                            <a href="{{ url_for('history') }}">История</a><br />
+                            <span style="color: red;">(в разработке)</span>
+                        </li>
                         <li><a href="{{ url_for('index') }}">Главная</a></li>
                         <li><a href="{{ url_for('user', username=current_user.username) }}">Профиль</a></li>
                         <li><a href="{{ url_for('logout') }}">Выйти</a></li>
