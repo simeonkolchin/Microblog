@@ -15,17 +15,8 @@
             <div>
                 <div>
                     <ul>
-                        <li>
-                            <a href="{{ url_for('index2') }}">
-                                Microblog <br>
-                            </a>
-                            <span style="color: red;">(в разработке)</span>
-                        </li>
                         <li><a style="color:#4AF6CD" href="{{ url_for('messenge') }}">Message</a></li>
-                        <li>
-                            <a href="{{ url_for('history') }}">История</a><br />
-                            <span style="color: red;">(в разработке)</span>
-                        </li>
+                        <li><a href="{{ url_for('history') }}">Background - js</a><br /></li>
                         <li><a href="{{ url_for('index') }}">Главная</a></li>
                         <li><a href="{{ url_for('user', username=current_user.username) }}">Профиль</a></li>
                         <li><a href="{{ url_for('logout') }}">Выйти</a></li>

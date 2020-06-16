@@ -64,7 +64,6 @@
     <Content Include="app\static\css\styles__login.css" />
     <Content Include="app\static\css\styles__layout.css" />
     <Content Include="app\static\css\styles__user.css" />
-    <Content Include="app\static\css\style__index2.css" />
     <Content Include="app\static\fonts\fontawesome-webfont.eot" />
     <Content Include="app\static\fonts\fontawesome-webfont.svg" />
     <Content Include="app\static\fonts\fontawesome-webfont.ttf" />
@@ -98,7 +97,6 @@
     <Content Include="app\static\js\libs.min.js" />
     <Content Include="app\static\js\main.js" />
     <Content Include="app\Templates\history.html" />
-    <Content Include="app\Templates\index2.html" />
     <Content Include="app\Templates\index.html" />
     <Content Include="app\Templates\layout.html" />
     <Content Include="app\Templates\login.html" />

@@ -85,13 +85,9 @@ $(function(){
   $('.surfboard-box__circle').on('click', function(){ 
     $(this).toggleClass('active')
   });
-    
-    $('.checkbox__name-text, .checkbox__hover, .checkbox__name-line').on('click', function () { 
-    $('.checkbox__name-text, .checkbox__name-line').toggleClass('active')
-    });
 
-    $('.input__line').on('click', function () {
-        $(this).toggleClass('active')
-    });
+    $('.checkbox__name - text, .checkbox__name-line, .checkbox__hover ').on('click', function () { 
+      $('.checkbox__name-text, .checkbox__name-line ').toggleClass('active')
+  });
 
 });
